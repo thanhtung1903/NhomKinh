@@ -1,0 +1,8 @@
+<tr>
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td>
+    <%= link_to t(".edit"), edit_admin_ad_user_path(user) %>
+    <%= link_to t(".destroy"), admin_ad_users_path, method: :delete %>
+  </td>
+</tr>

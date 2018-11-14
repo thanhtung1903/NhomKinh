@@ -1,0 +1,23 @@
+vi:
+  dictionary:
+    email: &email Email
+    name: &name Tên
+    password: &password Mật khuẩ
+    password_confirmation: &password_confirmation Nhập lại mật khẩu
+    save: &save Lưu
+    edit: &edit Sửa
+    delete: &delete Xóa
+  admin:
+    ad_users:
+      form:
+        name: *name
+        email: *email
+        password: *password
+        password_confirmation: *password_confirmation
+        save: *save
+      index:
+        name: *name
+        email: *email
+      user:
+        edit: *edit
+        delete: *delete

@@ -1,0 +1,29 @@
+<%= form_for user, url: yield(:form_action) do |f| %>
+  <div>
+    <%= f.label :name, t(".name") %>
+    <%= f.text_field :name, placeholder: t(".name") %>
+    <%= errors_for f, :name %>
+  </div>
+
+  <div>
+    <%= f.label :email, t(".email") %>
+    <%= f.text_field :email, placeholder: t(".email") %>
+    <%= errors_for f, :email %>
+  </div>
+
+  <div>
+    <%= f.label :password, t(".password") %>
+    <%= f.password_field :password, placeholder: t(".password") %>
+    <%= errors_for f, :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, t(".password_confirmation") %>
+    <%= f.password_field :password_confirmation, placeholder: t(".password_confirmation") %>
+    <%= errors_for f, :password_confirmation %>
+  </div>
+
+  <div>
+      <%= f.submit t(".save") %>
+  </div>
+<% end %>

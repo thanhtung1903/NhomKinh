@@ -1,0 +1,38 @@
+vi:
+  dictionary:
+    password: &password Mật khẩu
+    password_confirmation: &password_confirmation Nhập lại mật khẩu
+    user: &user Users
+    error_blank: &error_blank không được để trống
+    error_too_long: &error_too_long không quá %{count} ký tự
+    error_too_short: &error_too_short Vui lòng nhập %{count} ký tự trở lên
+    error_taken: &error_taken đã tồn tại
+    invalid: &invalid không hợp lệ
+    error_confirmation: &error_confirmation Mật khẩu mới không trùng khớp
+  activerecord:
+    models:
+      user:
+        one: *user
+    attributes:
+      user:
+        password: Mật khẩu
+        password_confirmation: Nhập lại mật khẩu
+        name: Tên
+        email: Email
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: *error_blank
+              too_short: *error_too_short
+              too_long: *error_too_long
+            name:
+              too_long: *error_too_long
+              blank: *error_blank
+            email:
+              invalid: *invalid
+              blank: *error_blank
+              taken: *error_taken
+            password_confirmation:
+              confirmation: *error_confirmation
